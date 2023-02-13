@@ -1,0 +1,12 @@
+# /wordpress-docker/docker-compose.yml
+---
+version: '3.8'
+services:
+  python:
+    container_name: python
+    build:
+      context: .
+      dockerfile: Python.Dockerfile
+    volumes:
+      - ./NDPI:/NDPI
+      - ./app:/app
